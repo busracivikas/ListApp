@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListApp.MainPage"
+             Title="Yapılacaklar Listesi"
+             Background="#93A0DD">
+    <ScrollView>
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
+          ColumnDefinitions="Auto,*"
+          RowSpacing="5"
+          ColumnSpacing="15">
+
+        <Label Text="Görev:" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="Yapılacak görevi tanımlayınız." Grid.Row="0" Grid.Column="1" Margin="0,0,25,0"/>
+
+        <Label Text="Öncelik" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="Öncelik sırasını tanımlayınız." Grid.Row="1" Grid.Column="1" Margin="0,0,25,0"/>
+
+        <Label Text="Durum:" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center"/>
+        <Entry Placeholder="Yapılacak görevin durumun tanımlayınız." Grid.Row="2" Grid.Column="1"
+               Keyboard="Telephone" Margin="0,0,25,0"/>
+
+        <Label Text="Görev Türü:" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center"/>
+        <StackLayout Grid.Row="3" Grid.Column="1" Orientation="Vertical">
+            <RadioButton Content="Temizlik Yapmak" Margin="0,0,10,0"/>
+            <RadioButton Content="Bahçe Bakımı" Margin="0,0,10,0"/>
+            <RadioButton Content="Alışveriş Yapmak" Margin="0,0,10,0"/>
+            <RadioButton Content="Ev İşlerini Yapmak" Margin="0,0,10,0"/>
+            <RadioButton Content="Araba Yıkamak" Margin="0,0,10,0"/>
+            <RadioButton Content="Çocuklarla İlgilenmek" Margin="0,0,10,0"/>
+            <RadioButton Content="Evcil Hayvanlarla İlgilenmek" Margin="0,0,10,0"/>
+            <RadioButton Content="Kendine Vakit Ayırmak"/>
+        </StackLayout>
+
+        <Label Text="Başlangıç Tarihi" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center"/>
+        <DatePicker Grid.Row="4" Grid.Column="1"/>
+
+        <Label Text="Bitiş Tarihi" Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center"/>
+        <DatePicker Grid.Row="5" Grid.Column="1"/>
+
+
+        </Grid>
+
+    </ScrollView>
+</ContentPage>
